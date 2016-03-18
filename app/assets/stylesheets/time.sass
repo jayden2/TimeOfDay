@@ -1,0 +1,55 @@
+// Place all the styles related to the time controller here.
+// They will automatically be included in application.css.
+// You can use Sass here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300)
+$ubuntu: 'Ubuntu', serif
+
+=style($color, $align, $size)
+	color: $color
+	text-align: $align
+	font-size: $size
+html
+	font-family: $ubuntu
+	transition: 0.5s ease
+	background-color: #000
+	overflow: hidden
+.container
+	margin: 0 auto
+	margin-top: 15%
+	width: 41%
+	min-width: 480px
+	h1
+		+style(#FFF, center, 600%)
+	h2
+		@extend h1
+		font-size: 4.2em
+	a
+		+style(#FFF, center, 100%)
+		text-decoration: none
+		img
+			margin-top: 20px
+			padding-left: 3%
+			width: 3%
+			height: auto
+			color: #FFF
+	a:hover
+		text-decoration: underline
+
+	li
+		a
+			padding: 10px
+			img
+				opacity: 0
+				transition: 0.5s ease
+	li > a:hover
+		img
+			opacity: 1
+			-webkit-filter: invert(100%)
+			filter: invert(100%)
+	li > a:active
+		img
+			opacity: 0.5
+	#values
+		@extend h1
+		font-size: 1.3em
+		list-style: none
